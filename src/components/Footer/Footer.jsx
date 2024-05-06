@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
     return (
         <div>
-            <footer className="p-10 bg-base-200 text-base-content">
+            <footer className="p-10 bg-neutral text-neutral-content">
   <div className='footer justify-between	 max-w-6xl mx-auto'>
   <aside>
     <NavLink to="/"><img src="src/assets/career-builder-icon.png" className='w-40' alt="logo" /></NavLink>

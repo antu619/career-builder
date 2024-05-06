@@ -21,7 +21,7 @@ const Navbar = () => {
                             {manue}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Career Builder</a>
+                    <NavLink to="/"><h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">Career Builder</h2></NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal gap-1 px-1">
@@ -29,7 +29,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Apply Now</a>
+                <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Apply Now</button>
                 </div>
             </div>
         </div>
