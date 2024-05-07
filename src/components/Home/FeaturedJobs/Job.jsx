@@ -1,10 +1,11 @@
 import React from 'react';
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Job = ({ job }) => {
 
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
+    const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
 
     return (
         <div className="card card-compact bg-base-100 shadow-xl border">
@@ -23,7 +24,8 @@ const Job = ({ job }) => {
                     <h3 className='flex items-center gap-1 text-xl'><AiOutlineDollar />Salary: {salary}</h3>
                 </div>
                 <div className="card-actions">
-                    <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white">View Details</button>
+                    <Link to={`/job/${id}`}>
+                    <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white">View Details</button></Link>
                 </div>
             </div>
         </div>
