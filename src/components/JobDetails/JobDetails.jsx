@@ -18,7 +18,7 @@ const JobDetails = () => {
     const {job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information  } = job;
 
     const handleAppliedJob = () => {
-        saveAppliedJob(id);
+        saveAppliedJob(idInt);
         toast.success("Successfully Applied!");
     }
 
