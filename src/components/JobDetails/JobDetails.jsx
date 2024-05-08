@@ -18,9 +18,17 @@ const JobDetails = () => {
     const {job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information  } = job;
 
     const handleAppliedJob = () => {
-        saveAppliedJob(idInt);
         toast.success("Successfully Applied!");
+        saveAppliedJob(idInt);
+        setTimeout(reloadTimeout, 3000)
     }
+
+    const reloadTimeout = () => {
+        location.reload();
+    };
+    
+    const storage = localStorage.getItem('applied-jobs');
+    const exists = storage?.includes(idInt);
 
     return (
         <div className='mb-20'>
@@ -53,7 +61,12 @@ const JobDetails = () => {
                         <IoLocationOutline className='text-2xl' /><p className=''>Address: {contact_information.address}</p>
                         </div>
                     </div>
-                    <button onClick={handleAppliedJob} className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white mt-10 w-full">Apply Now</button>
+                    {
+                        exists ?
+                        <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white mt-10 w-full" disabled="disabled">Applied</button>
+                        :
+                        <button onClick={handleAppliedJob} className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white mt-10 w-full">Apply Now</button>
+                    }
                 </div>
             </div>
             <ToastContainer />
