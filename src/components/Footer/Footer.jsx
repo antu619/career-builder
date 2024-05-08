@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="p-10 bg-neutral text-neutral-content">
   <div className='footer justify-between	 max-w-6xl mx-auto'>
   <aside>
-    <NavLink to="/"><img src="/src/assets/career-builder-icon.png" className='w-40' alt="logo" /></NavLink>
+    <NavLink to="/"><img src="https://i.ibb.co/9ghGdjb/career-builder-icon.png" className='w-40' alt="logo" /></NavLink>
     <p>Career Builder Ltd.<br/>Providing reliable tech since 1992</p>
   </aside> 
   <nav>
