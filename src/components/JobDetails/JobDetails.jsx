@@ -3,6 +3,10 @@ import { AiOutlineDollar } from 'react-icons/ai';
 import { IoLocationOutline } from 'react-icons/io5';
 import { MdOutlineEmail, MdOutlinePhoneInTalk, MdWorkOutline } from 'react-icons/md';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveAppliedJob } from '../../utility/localstorage';
+
 
 const JobDetails = () => {
 
@@ -12,6 +16,11 @@ const JobDetails = () => {
     const job = jobs.find(job => job.id === idInt);
 
     const {job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information  } = job;
+
+    const handleAppliedJob = () => {
+        saveAppliedJob(id);
+        toast.success("Successfully Applied!");
+    }
 
     return (
         <div className='mb-20'>
@@ -44,9 +53,10 @@ const JobDetails = () => {
                         <IoLocationOutline className='text-2xl' /><p className=''>Address: {contact_information.address}</p>
                         </div>
                     </div>
-                    <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white mt-10 w-full">Apply Now</button>
+                    <button onClick={handleAppliedJob} className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white mt-10 w-full">Apply Now</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
