@@ -1,11 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const manue = <>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/jobs">Jobs</NavLink></li>
-    <li><NavLink to="/statistics">Statistics</NavLink></li>
     <li><NavLink to="/applied">Applied Jobs</NavLink></li>
     <li><NavLink to="/blogs">Blogs</NavLink></li>
     </>
@@ -29,7 +28,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Apply Now</button>
+                <Link to="/jobs" className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Apply Now</Link>
                 </div>
             </div>
         </div>

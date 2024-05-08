@@ -10,6 +10,8 @@ import Home from './components/Home/Home';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import JobDetails from './components/JobDetails/JobDetails';
+import Jobs from './components/Jobs/Jobs';
+import Blogs from './components/Blogs/Blogs';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
         path: '/applied',
         element: <AppliedJobs />,
         loader: () => fetch('/jobs.json')
+      },
+      {
+        path: '/jobs',
+        element: <Jobs />
+      },
+      {
+        path: '/blogs',
+        element: <Blogs />
       },
       {
         path: '/job/:id',
