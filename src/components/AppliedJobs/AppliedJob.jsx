@@ -10,6 +10,7 @@ const AppliedJob = ({appliedJob}) => {
 
     return (
         <div>
+            {/* Helmet */}
             <Helmet>
                 <title>Applied Jobs - Career Builder</title>
             </Helmet>
