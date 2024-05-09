@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { AiOutlineDollar } from 'react-icons/ai';
 import { IoLocationOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,9 @@ const AppliedJob = ({appliedJob}) => {
 
     return (
         <div>
+            <Helmet>
+                <title>Applied Jobs - Career Builder</title>
+            </Helmet>
             <div className="flex items-center bg-base-100 shadow-xl border rounded-lg py-5 pl-5 pr-10 gap-5">
             <div className='flex items-center w-48 h-48 bg-base-200 rounded-lg p-5'>
             <img src={logo} alt="logo" />

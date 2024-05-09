@@ -6,6 +6,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveAppliedJob } from '../../utility/localstorage';
+import { Helmet } from 'react-helmet-async';
 
 
 const JobDetails = () => {
@@ -32,6 +33,9 @@ const JobDetails = () => {
 
     return (
         <div className='mb-20'>
+            <Helmet>
+                <title>Job Details - Career Builder</title>
+            </Helmet>
             {/* Job Details Banner */}
             <div className='flex items-center justify-center static h-80'>
                 <img className='absolute left-0 top-[169px]' src="/src/assets/images/bg1.png" alt="" />
